@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>My Shopping List</title>
+  <!-- <script src="https://use.fontawesome.com/6d284e91b4.js"></script> -->
+  <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="shopping.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <h1>My Shopping List</h1>
+    <div class="row">
+      <form>
+        <div class="col-input">
+          <input type="text" name="addItem" placeholder="Add new item" id="newItem">
+        </div>
+        <div class="col-amount">
+          <input type="number" name="itemAmount" placeholder="0" id="amount">
+        </div>
+        <div class="col-add">
+          <!-- <i class="fa fa-plus-square" aria-hidden="true"></i> -->
+          <input type="button" value="Add" class="addBtn" id="addBtn">
+        </div>
+      </form>
+    </div>
+  <div class="row">
+    <label><h5>Items to shop</h5></label>
+    <hr>
+  </div>
+    <div class="row">
+      <ul id="ul-item-list">
+        <li>
+          <label class="list-label">
+            <input type="checkbox" class="check">
+            <span class="list-item">Mango - 20</span>
+          </label>
+          <div class="edit-delete">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+              </span>
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-trash fa-stack-1x fa-inverse delete"></i>
+              </span>
+          </div>
+        </li>
+        <!-- list 2 -->
+        <li>
+          <label class="list-label">
+            <input type="checkbox" class="check">
+            <span class="list-item">Banana - 20</span>
+          </label>
+          <div class="edit-delete">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+            </span>
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-trash fa-stack-1x fa-inverse delete"></i>
+            </span>
+          </div>
+        </li>
+        <!-- list 3 -->
+        <li>
+          <label class="list-label">
+            <input type="checkbox" class="check">
+            <span class="list-item">orange - 20</span>
+        </label>
+          <div class="edit-delete">
+            <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+          </span>
+            <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-trash fa-stack-1x fa-inverse delete"></i>
+          </span>
+          </div>
+        </li>
+        <!-- list 4 -->
+        <li>
+          <label class="list-label">
+        <input type="checkbox" class="check">
+        <span class="list-item">Grapes - 20</span>
+      </label>
+          <div class="edit-delete">
+            <span class="fa-stack fa-lg">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+        </span>
+            <span class="fa-stack fa-lg">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-trash fa-stack-1x fa-inverse delete"></i>
+        </span>
+          </div>
+        </li>
+        <!-- list 5 -->
+        <li>
+          <label class="list-label">
+            <input type="checkbox" class="check">
+            <span class="list-item">Pineapple - 20</span>
+          </label>
+              <div class="edit-delete">
+                <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+          </span>
+                <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-trash fa-stack-1x fa-inverse delete"></i>
+          </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="row">
+      <label id="item-shopped">
+        <h5>Items shopped <i id="toggle-icon" class="fa fa-caret-down" aria-hidden="true"></i></h5>
+      </label>
+      <hr>
+    </div>
+    <div class="row">
+      <ul id="ul-item-shopped">
+
+      </ul>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="shopping.js">
+  </script>
+</body>
+
+</html>

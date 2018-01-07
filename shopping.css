@@ -1,0 +1,160 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: serif;
+  background-image: url('images/background.jpg');
+}
+
+.notebook{
+  position: absolute;
+  margin: 0 auto;
+}
+.wrapper{
+  width: 70%;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+  overflow: auto;
+  margin-top: 40px;
+  box-shadow: 0px 0px 59px 10px grey;
+  padding-bottom: 20px;
+  border-radius: 5px;
+}
+.wrapper img{
+  margin-top: -50px;
+  position: relative;
+}
+.wrapper h1{
+    color: white;
+    font-family: 'courier';
+    text-align: center;
+    padding: 18px 0 20px 0;
+    background: #36486b;
+}
+
+.row{
+  width: 100%;
+  float: left;
+}
+h5{
+  margin-top: 50px;
+  margin-left: 20px;
+  font-family: 'Annie Use Your Telescope';
+}
+hr{
+  width: 73%;
+  border: 1px solid #b1cbbb;
+  margin-left: 20px;
+}
+#ul-item-list li{
+  margin-right: 10px;
+  background-color: #b1cbbb;
+  margin-bottom: 2px;
+  padding-top: 5px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+/**************item adding section************/
+form{
+  margin-top: 20px;
+}
+.col-input{
+  width: 60%;
+  float: left;
+}
+input[type=text]{
+  width: 95%;
+  height: 40px;
+  font-size: 18px;
+  margin-left: 15px;
+  margin-top: 5px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  outline: none;
+  border: 1px solid #999999;
+  box-shadow:0 0px 3px 1px #C0C0C0 inset;
+  padding-left: 15px;
+}
+
+input:focus{
+  border: 1px solid #3366FF;
+}
+input[type=number]:focus{
+  border: 1px solid #3366FF;
+}
+
+input[type=number]{
+  width: 50%;
+  height: 40px;
+  margin-top: 5px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid #999999;
+  box-shadow:0 0px 3px 1px #C0C0C0 inset;
+  padding-left: 15px;
+}
+.col-amount{
+    width: 20%;
+    float: left;
+    padding-left: 5px;
+}
+.col-add{
+    width: 10%;
+    float: left;
+}
+.addBtn{
+  border: none;
+  height: 43px;
+  width: 80px;
+  font-size: 20px;
+  color: #f0f0f0;
+  background: #034f84;
+  margin-top: 4px;
+  border: 1px solid #999999;
+}
+
+
+/*****************item list with edit/delete*********************/
+
+.fa-lg{
+  font-size: 15px;
+  margin-top: -3px;
+}
+.edit-delete{
+  float: right;
+  margin-right: 10px;
+}
+/********** list item  with checkbox**************/
+ul{
+  list-style: none;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+label{
+  cursor: pointer;
+  font-size: 25px;
+}
+
+input[type='checkbox']{
+  display: none;
+}
+input[type='checkbox'] + .list-item::before{
+  font-family: "FontAwesome";
+  content: '\f096';
+  margin-right: 10px;
+  font-size: 30px;
+}
+input[type='checkbox']:checked + .list-item::before{
+  font-family: "FontAwesome";
+  content: "\f14a";
+  margin-right: 10px;
+  color: green;
+}
+
+/*********item shopped **********/
+#ul-item-shopped .list-item{
+  text-decoration: line-through;
+  cursor: default;
+}
