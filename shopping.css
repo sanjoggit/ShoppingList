@@ -69,8 +69,8 @@ input[type=text]{
   font-size: 18px;
   margin-left: 15px;
   margin-top: 5px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   outline: none;
   border: 1px solid #999999;
   box-shadow:0 0px 3px 1px #C0C0C0 inset;
@@ -93,6 +93,8 @@ input[type=number]{
   border: 1px solid #999999;
   box-shadow:0 0px 3px 1px #C0C0C0 inset;
   padding-left: 15px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .col-amount{
     width: 20%;
@@ -157,4 +159,28 @@ input[type='checkbox']:checked + .list-item::before{
 #ul-item-shopped .list-item{
   text-decoration: line-through;
   cursor: default;
+}
+
+/***********media queries **************/
+
+@media only screen and (max-width: 500px){
+
+  h1{
+    font-size: 30px;
+  }
+  .col-input{
+    width: 70%;
+    margin-left: 10px;
+  }
+  .col-amount{
+    width: 25%;
+  }
+  .col-add{
+    width: 100%;
+    display: block;
+  }
+  .addBtn{
+    width: 85%;
+    margin-left: 25px;
+  }
 }
