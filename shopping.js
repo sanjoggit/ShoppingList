@@ -80,11 +80,29 @@ const createList = ()=>{
 function addItem(){
   if(!newItem.value.length==0){
     const addedElement = ulItemList.appendChild(createList());
-    addedElement.firstChild.addEventListener('click', function(e){
-      console.log(e);
-      // if(e.target.className == "fa fa-trash fa-stack-1x fa-inverse"){
-      //   this.remove();
-      // }
+    addedElement.childNodes[0].childNodes[0].addEventListener('click', function(e){
+      cloneList = e.path[2].cloneNode(true);
+      cloneList.childNodes[0].childNodes[0].remove();
+      cloneList.childNodes[1].childNodes[0].childNodes[1].className = 'fa fa-undo fa-stack-1x fa-inverse';
+      const appendedLi = ulItemShopped.appendChild(cloneList);
+      //console.log(appendedLi);
+      appendedLi.childNodes[1].childNodes[1].addEventListener('click', ()=>appendedLi.remove());
+      appendedLi.childNodes[1].childNodes[0].addEventListener('click', ()=>{
+        const appendedCloned = appendedLi.cloneNode(true);
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.className = 'check';
+        appendedCloned.childNodes[0].insertBefore(input, appendedCloned.childNodes[0].childNodes[0]);
+        appendedCloned.childNodes[1].childNodes[0].childNodes[1].className = 'fa fa-pencil fa-stack-1x fa-inverse';
+        const itemClonedToShop = ulItemList.appendChild(appendedCloned); // li cloned back to items to shop
+        console.log(itemClonedToShop);
+        itemClonedToShop.childNodes[1].childNodes[1].childNodes[1].addEventListener('click', console.log('fa'));
+
+        appendedLi.remove();
+      });
+      setTimeout(function(){
+        e.path[2].remove();
+      }, 300);
     });
   }
 }
